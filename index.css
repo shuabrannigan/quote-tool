@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+}
+
+h3 {
+    text-align: center;
+
+}
+form {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+table {
+    margin: 0 auto;
+    width: 80%;
+}
+
+table td {
+    text-align: center;
+}
+
+table th {
+    text-align: center;
+
+}
+
+th:first-child {
+    padding-left: 15px  !important; 
+ }
+
+thead {
+    background-color: rgb(235, 235, 235);
+    color: black;
+
+}
+
+.del-button {
+    background-color: red;
+    border-color: red;
+    color:#fff;
+}
+
+.del-button:hover {
+border-color: black;
+}
+
+.speech {
+    padding: 10px 20px;
+    
+  
+}
+.microphone {
+height: 24px;
+transform: translateY(-3px);
+
+
+}
+
+.disable {
+    display: none;
+}
+
+.cost-contain {
+    width: 80%;
+    text-align: center;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    padding-top: 1em;
+    margin: 0 auto 0.5em auto
+}
+
+.cost-button {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+
+
+/* ALERT BUTTON */
+
+.alert {
+    padding: 2em;
+    background-color: #f44336;
+    color: white;
+    margin-bottom: 1em;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.okbtn {
+    background-color: #fff;
+}
+
+.closebtn {
+    background-color: #fff;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .title { 
+        letter-spacing: 0.05em; 
+        margin: 0.5em;
+
+    }
+    table {
+        width: 100%;
+        border-collapse: separate;
+    }
+    
+    table th {
+        font-size: 0.9em;
+    }
+
+    table td {
+        font-size: 0.75em;
+    }
+
+    .newQ {
+        padding: 0 10px;
+    }
+
+    .del-button {
+        padding: 0 22px;
+    }
+
+    .cost-contain {
+        text-align: center;
+        border-top: 1px solid lightgrey;
+        border-bottom: 1px solid lightgrey;
+        padding-top: 1em;
+        margin-bottom: 0.5em;
+    }
+
+    .cost {
+        padding: 0 20px !important;
+        margin-left: 0 !important;
+    }
+
+    .cost-button {
+
+    display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+    }
+
+}

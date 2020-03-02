@@ -1,0 +1,33 @@
+# Quote Application
+
+This project is a application I built for a friend to use as a real world tool.
+
+The intent of the application is to make it easier for the user to give customers quotes based on measurments.
+
+The user can set the Cost per meter squared (default is $75), they can then add the dimensions then add that to the quote. 
+
+The table then runs a calculation to give them the total required material for the job and cost. 
+
+----
+
+I have implimented some features also:
+
+- ability to set cost
+
+- ability to add and remove single items from the quote. 
+
+- ability to delete every item from the qoute, doing this gives the user a warning and must confirm. 
+
+- also implimented speech recognition for entering the inputs (this does not work outside of Chrome Browser, whcih is a shame).
+
+features I want to impliment:
+
+- storing table to localStorage until **new quote** is selected.
+
+- restyling completely, using Skeleton CSS currently for basic styling. 
+
+----
+
+Currently this works fine on mobile so long as the user doesn't refresh the page, it stores the data.
+
+
