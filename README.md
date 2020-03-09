@@ -22,12 +22,14 @@ I have implimented some features also:
 
 features I want to impliment:
 
-- storing table to localStorage until **new quote** is selected.
+~~[] storing table to localStorage until **new quote** is selected.~~
 
-- restyling completely, using Skeleton CSS currently for basic styling. 
+[x] restyling completely, using Skeleton CSS currently for basic styling. **Moved styling over to Materialize CSS**
 
 ----
 
-Currently this works fine on mobile so long as the user doesn't refresh the page, it stores the data.
+Update to Materialize CSS
+
+![ScreenShot] ()
 
 
