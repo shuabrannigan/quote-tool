@@ -1,6 +1,6 @@
 const speechbtn = document.getElementsByClassName("speech");
-const setCostContainer = document.getElementById("setCost")
-const editCostBtn = document.getElementById("editCost")
+const setCostContainer = document.getElementById("setCost");
+const editCostBtn = document.getElementById("editCost");
 
 const tableBody = document.querySelector("tbody");
 const printResult = document.querySelector(".result");
@@ -8,24 +8,25 @@ const printSMResult = document.querySelector(".smresult");
 const form = document.querySelector("form");
 let cost = 75;
 
-setCostContainer.style.display = 'none'
+setCostContainer.style.display = "none";
 
 
 // Edit and Set Cost
 function editCost() {
-if (setCostContainer.style.display === 'none') {
-    setCostContainer.style.display = ''
-    editCostBtn.textContent = 'Close'
-    } else {
-    setCostContainer.style.display = 'none'
-    editCostBtn.textContent = 'Set Cost'
-    }
+  if (setCostContainer.style.display === "none") {
+    setCostContainer.style.display = "";
+    editCostBtn.textContent = "Close";
+  } else {
+    setCostContainer.style.display = "none";
+    editCostBtn.textContent = "Set Cost";
+  }
 }
 
 function setCost() {
-    cost = setCostContainer.childNodes[0].value    
-    setCostContainer.style.display = 'none'
-    editCostBtn.textContent = 'Set Cost'  
+  cost = setCostContainer.childNodes[1].value;
+  console.log(cost)
+  setCostContainer.style.display = "none";
+  editCostBtn.textContent = "Set Cost";
 }
 
 // Calculation for total cost
@@ -34,20 +35,18 @@ function calcMeterSquare(length, width, cost) {
   return length * width * cost;
 }
 
-
-// display buttons 
+// display buttons
 function displayBtn() {
-  if (window.navigator.vendor !== "Google Inc.") {
+  // if (window.navigator.vendor === "Google Inc.") {
+  if (window.navigator.vendor !== "010") {
     speechbtn[0].style.display = "none";
     speechbtn[1].style.display = "none";
     console.log("Voice recognition not compatible with your browser");
-
   } else {
-    console.log("Voice recognition enabled")
+    console.log("Voice recognition enabled");
   }
 }
 displayBtn();
-
 
 // Create Table entry
 form.addEventListener("submit", e => {
@@ -84,9 +83,10 @@ form.addEventListener("submit", e => {
   ).toFixed(2);
 
   const delButtonTd = document.createElement("td");
+  delButtonTd.setAttribute("class", "center-align")
   const delButton = document.createElement("button");
   delButton.textContent = "Delete";
-  delButton.setAttribute("class", "del-button");
+  delButton.setAttribute("class", "del-button red btn");
   delButton.setAttribute("id", measurement.id);
   delButton.setAttribute("type", "submit");
   delButton.setAttribute("onclick", "deleteItem(id)");
@@ -104,8 +104,8 @@ form.addEventListener("submit", e => {
 
   totalIs();
   totalSM();
-  if (showDiv.style.display === 'none') {
-  showHide();
+  if (showDiv.style.display === "none") {
+    showHide();
   }
 });
 
@@ -118,7 +118,7 @@ function totalIs() {
     // console.log(tds[i].innerHTML)
   }
 
-  return (printResult.textContent = "$"+summed.toFixed(2));
+  return (printResult.textContent = "$" + summed.toFixed(2));
 }
 totalIs();
 
@@ -139,12 +139,13 @@ totalSM();
 
 function deleteItem(e) {
   const getItem = document.getElementById(e);
-  const id = getItem.id;
+  // const id = getItem.id;
   getItem.remove();
+
   totalIs();
   totalSM();
 }
 
 function deleteAll() {
-    alertbox.style.display = ''
+  alertbox.style.display = "";
 }

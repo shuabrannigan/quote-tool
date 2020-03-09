@@ -4,39 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quote Tool</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 <body>
-   
-    <h3 class="title">Quote Tool</h3>
-    <div class="cost-contain" id="setCost"><input class="" type="number" step="0.01" value="75"><button type="submit"class="cost" onclick="setCost()">Set Cost</button></div>
-    <div class="cost-button">
-        <button onclick="editCost()" class="cost u-full-width" id="editCost">Set Cost</button>
+<nav>
+    <div class="nav-wrapper blue lighten-1">
+        <a class="title brand-logo center">Quote Tool</a>        
+    </div>
+</nav>
+
+
+<div class="row"></div>
+<div class="container">
+
+    <div class="cost-contain row" id="setCost">
+
+        <input class="input-field col s6" type="number" step="0.01" value="75">
+
+        <button type="submit"class="cost btn blue lighten-2 col s6" onclick="setCost()">Set Cost</button></div>
+
+    <div class="cost-button row">
+        <button onclick="editCost()" class="cost btn col s12 blue lighten-2" id="editCost">Set Cost</button>
 
     </div>
-    <form>
-        <div class="row">
-            <div class="six columns">
+    <form class="">
+
+
         <label for="length">Length (m): </label>
-        <input class="u-full-width lengthtalk" type="number" step="0.01" id="length" name="length" required>
-        <button class="speechlength speech " onclick="speechLength()"><img class="microphone" src="/microphone.png"></button>
-    </div>
-    <div class="six columns">   
-        <label for="width">Width (m): </label>
-        <input class="u-full-width widthtalk" type="number" step="0.01"  id="width" name="width" required>
-   <button class="speechwidth speech" onclick="speechWidth()"><img class="microphone" src="/microphone.png"></button>
+        <input class="lengthtalk input-field" type="number" step="0.01" id="length" name="length" required>
+        <button class="speechlength speech btn " onclick="speechLength()"><i class="material-icons">hearing</i></button>   
 
-    </div>
-    </div>
-    <button class="button-primary" type="submit">Add To Quote</button>
+
+        <label for="width">Width (m): </label>
+        <input class="widthtalk input-field" type="number" step="0.01"  id="width" name="width" required>
+   <button class="speechwidth speech btn" onclick="speechWidth()"><i class="material-icons">hearing</i></button>
+
+   <button class="btn blue lighten-2 " type="submit"><i class="material-icons left">add</i> Add To Quote</button>
     </form>
+
+   
    
 
 
     <div class="show-hide">
-    <table>
+    <table class="striped">
         <thead>
             <tr>
                 <th>Length (m)</th>
@@ -49,11 +64,25 @@
         <tbody id="body">
 
         </tbody>
-        <div class="alert" id="alert">
-            <p>Are you sure you want to delete quote?</p>
-            <button class="closebtn" onclick="closebtn()">No</button>
-            <button class="okbtn" onclick="okbtn()">Yes</button>
-        </div>
+
+
+
+        <div class="alert col s6 offset-s3 center" id="alert">
+            <div class="row">
+                <div class="col s12">
+                  <div class="card red darken-2">
+                    <div class="card-content white-text">
+                      <span class="card-title">Are you sure?</span>
+                      <p>This will start a fresh quote!</p>
+                    </div>
+                    <div class="card-action">
+                        <button class="closebtn btn-flat" onclick="closebtn()">No</button>
+                        <button class="okbtn btn white black-text" onclick="okbtn()">Yes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
     
         <tfoot>
             <tr>
@@ -61,18 +90,22 @@
                 <td class="smresult"></td>
                 <td class="result">
                 </td>
-                <td><button class="newQ" onclick="deleteAll()">New Quote</button></td>
+                <td class="center-align"><button class="newQ btn blue lighten-2" onclick="deleteAll()">New Quote</button></td>
             </tr>
         </tfoot>
     </table>
     </div>
-    <button class="show-hide-btn u-full-width " onclick="showHide()">Show</button>
+    <div class="row">
+        <br>
+    <button class="show-hide-btn col btn s12 blue lighten-2 " onclick="showHide()">Show</button>
+    </div>
 
-   
+</div>
+
+<script src="alert.js"></script>
+<script src="index.js"></script>
+<script src="speech.js"></script>
+<script src="showhide.js"></script>
     
-    <script src="alert.js"></script>
-    <script src="index.js"></script>
-    <script src="speech.js"></script>
-    <script src="showhide.js"></script>
 </body>
 </html>
