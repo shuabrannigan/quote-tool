@@ -30,6 +30,6 @@ features I want to impliment:
 
 Update to Materialize CSS
 
-![ScreenShot] (https://github.com/shuabrannigan/quote-tool/blob/master/ScreenShots/Quote%20Tool.png "Screenshot of UI")
+![Screenshot] (https://github.com/shuabrannigan/quote-tool/blob/master/ScreenShots/Quote%20Tool.png "Screenshot of UI")
 
 
