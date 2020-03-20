@@ -8,6 +8,8 @@ The user can set the Cost per meter squared (default is $75), they can then add 
 
 The table then runs a calculation to give them the total required material for the job and cost. 
 
+### Now Live http://quotetool.surge.sh/
+
 ----
 
 I have implimented some features also:
